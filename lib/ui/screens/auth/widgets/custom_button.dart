@@ -27,11 +27,11 @@ class CustomButtonState extends State<CustomButton> {
     return ElevatedButton(
       onPressed: widget.onPressed,
       child: Ink(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              MyColors.primaryColor.withOpacity(0.3),
-              MyColors.primaryColor.withOpacity(0.6),
+              MyColors.primaryColor,
+              MyColors.accentColor,
               MyColors.primaryColor,
             ],
             begin: Alignment.centerLeft,
@@ -39,7 +39,7 @@ class CustomButtonState extends State<CustomButton> {
           ),
         ),
         child: Container(
-          height: 60,
+          height: 50,
           width: widget.width ?? 80,
           alignment: Alignment.center,
           child: Text(

@@ -135,32 +135,27 @@ class AppTheme {
       textTheme: textTheme,
       primaryTextTheme: textTheme,
       typography: typography,
-
+      appBarTheme: AppBarTheme(
+        centerTitle: true,
+        elevation: 0,
+        backgroundColor: Colors.white,
+        titleTextStyle: titleLarge.copyWith(color: Colors.black),
+      ),
       buttonTheme: ButtonThemeData(
         textTheme: ButtonTextTheme.primary,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
         padding: const EdgeInsets.all(16),
         buttonColor: primaryColor,
       ),
-
-      appBarTheme: AppBarTheme(
-        elevation: 0,
-        backgroundColor: Colors.white,
-        titleTextStyle: titleLarge.copyWith(color: Colors.black),
-      ),
-
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          backgroundColor: MyColors.primaryColor,
           foregroundColor: Colors.white,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(25),
-          ),
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
           textStyle: labelLarge,
           fixedSize: const Size(140, 50),
         ),
       ),
-
       inputDecorationTheme: InputDecorationTheme(
         contentPadding: const EdgeInsets.symmetric(
           horizontal: 20,
@@ -174,22 +169,21 @@ class AppTheme {
         focusedBorder: border,
         floatingLabelBehavior: FloatingLabelBehavior.always,
       ),
-
       iconTheme: const IconThemeData(color: Colors.black, size: 24),
-
       dividerTheme: const DividerThemeData(
         thickness: 1,
         space: 1,
         // color: MyColors.divider,
       ),
-
       colorScheme: ColorScheme.light(
         primary: primaryColor,
         secondary: primaryColor,
         onSecondary: Colors.white,
         brightness: Brightness.light,
         background: Colors.white,
-      ).copyWith(background: MyColors.background),
+      ).copyWith(
+        background: MyColors.background,
+      ),
     );
   }
 
