@@ -13,7 +13,7 @@ class AppTheme {
     );
 
     var titleLarge = const TextStyle(
-      fontSize: 15,
+      fontSize: 18,
       fontWeight: FontWeight.w700,
       fontFamily: 'Poppins',
       color: Colors.black,
@@ -117,7 +117,7 @@ class AppTheme {
     );
 
     var border = OutlineInputBorder(
-      borderRadius: BorderRadius.circular(10),
+      borderRadius: BorderRadius.circular(25),
       borderSide: const BorderSide(color: MyColors.border, width: 1),
     );
 
@@ -143,9 +143,10 @@ class AppTheme {
         buttonColor: primaryColor,
       ),
 
-      appBarTheme: const AppBarTheme(
+      appBarTheme: AppBarTheme(
         elevation: 0,
         backgroundColor: Colors.white,
+        titleTextStyle: titleLarge.copyWith(color: Colors.black),
       ),
 
       elevatedButtonTheme: ElevatedButtonThemeData(
@@ -153,7 +154,7 @@ class AppTheme {
           backgroundColor: MyColors.primaryColor,
           foregroundColor: Colors.white,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(25),
           ),
           textStyle: labelLarge,
           fixedSize: const Size(140, 50),
